@@ -96,7 +96,13 @@ const StoreContextProvider = (props) => {
     const [token, setToken] = useState("");
     const [food_list, setFoodList] = useState([]);
     
-    const url = "https://fooddelivery-backend-6de0.onrender.com";
+    // StoreContext.jsx
+
+// Is line ko comment kar dein (GitHub Pages deployment ke waqt kaam aayegi)
+// const url = "https://fooddelivery-backend-6de0.onrender.com";
+
+// Is line ko use karein local testing ke liye
+const url = "http://localhost:4000";
 
     const addToCart = async (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
