@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-content">  
             <div className="footer-content-left">  
                 <img src={assets.logo} alt="" />  
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio corporis quia quam laborum fuga error ipsa eveniet ipsum dolore ratione hic accusantium obcaecati quaerat culpa totam quibusdam, aliquid voluptatem cupiditate.</p>
+                <p>Bringing your favorite flavors straight to your doorstep with lightning-fast delivery. Your hunger, our mission.</p>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="" />
                     <img src={assets.twitter_icon} alt="" />
@@ -34,7 +34,7 @@ const Footer = () => {
             </div>  
         </div>  
         <hr/>
-        <p className="footer-copyright">Copyright 2024  © FoodKart.com - All Right Reserved.</p>
+        <p className="footer-copyright">Copyright 2026  © Hungergo.com - All Right Reserved.</p>
     </div>  
    
   )

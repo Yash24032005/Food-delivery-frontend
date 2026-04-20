@@ -1,4 +1,4 @@
-.footer{  
+/* .footer{  
     color: #d9d9d9;  
     background-color: #323232;
     display: flex;  
@@ -48,6 +48,106 @@
         gap: 35px;
     }
     .footer-copyright{
+        text-align: center;
+    }
+} */
+
+.footer {
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 26px 8vw;
+    padding-top: 80px;
+    margin-top: 100px;
+}
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    /* 2fr se left side (logo/desc) ko zyada jagah milegi */
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+}
+
+.footer-content-left, .footer-content-right, .footer-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+/* --- LOGO SIZE FIX --- */
+.footer-content-left img:first-child {
+    max-width: 180px; /* Isse logo bada nahi hoga */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Description styling */
+.footer-content-left p {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.footer-content-left li, .footer-content-right li, .footer-content-center li {
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover effect for links */
+.footer-content-left li:hover, .footer-content-right li:hover, .footer-content-center li:hover {
+    color: white;
+}
+
+.footer-content-right h2, .footer-content-center h2 {
+    color: white;
+    font-weight: 600;
+}
+
+/* Social Icons styling */
+.footer-social-icons img {
+    width: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-social-icons img:hover {
+    transform: translateY(-5px); /* Chota sa bounce effect */
+}
+
+.footer hr {
+    width: 100%;
+    height: 2px;
+    margin: 20px 0px;
+    background-color: grey;
+    border: none;
+}
+
+.footer-copyright {
+    font-size: 14px;
+}
+
+/* Responsiveness for Mobile */
+@media (max-width: 750px) {
+    .footer {
+        padding: 40px 5vw;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .footer-content-left, .footer-content-right, .footer-content-center {
+        align-items: center;
+        text-align: center;
+    }
+    .footer-copyright {
         text-align: center;
     }
 }
