@@ -1,8 +1,14 @@
-// Is line ko update karo
-const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/api";
-// const BASE_URL = "http://localhost:5000/api";
+// // Is line ko update karo
+// const BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/api";
+// // const BASE_URL = "http://localhost:5000/api";
+
+// const getToken = () => localStorage.getItem("token");
+// Is line ko aise replace karo
+const BASE_URL = "https://food-delivery-backend-z8wb.onrender.com/api";
 
 const getToken = () => localStorage.getItem("token");
+
+// Baki niche ka sara code same rahega...
 
 // AUTH
 export const loginUser = (data) =>
