@@ -104,8 +104,15 @@ const StoreContextProvider = (props) => {
 // Is line ko use karein local testing ke liye
 // const url = "http://localhost:4000";
 // Localhost ko hata kar ye dynamic line daalo
-const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+// const url = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+// StoreContextProvider.jsx ke andar
 
+const url = import.meta.env.VITE_BACKEND_URL 
+    ? import.meta.env.VITE_BACKEND_URL 
+    : window.location.hostname.includes('github.io') 
+        ? "https://food-delivery-backend-z8wb.onrender.com" // Apna actual Render URL yahan likho
+        : "http://localhost:4000";
+        
     const addToCart = async (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
         if (token) {
