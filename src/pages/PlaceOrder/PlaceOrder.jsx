@@ -171,6 +171,9 @@ const PlaceOrder = () => {
         { headers: { token } }
       );
 
+      // YAHAN LIKHO:
+      console.log("Backend Response:", response.data);
+
       if (response.data.success) {
         const dataRes = response.data;
 
