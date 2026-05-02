@@ -1,9 +1,12 @@
-.header{
-    height: 34vw;
-    margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size: contain;
+.header {
+    width: 100%;
+    height: 100vh; /* full screen height */
+    margin: 0; /* remove side gap */
+    background: url('/header_img.png') no-repeat center center;
+    background-size: cover; /* 🔥 main fix */
     position: relative;
+    /* Fully pill shape (rare for hero) */
+    border-radius: 30px;        
 }
 
 .header-contents{
